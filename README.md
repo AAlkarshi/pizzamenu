@@ -1,70 +1,9 @@
-# Getting Started with Create React App
+Ce code est une application React qui simule un site web de pizzeria avec plusieurs composants : Header, Menu, Pizza et Footer. Le composant principal App structure l'application en affichant ces différents composants dans une div conteneur.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Le composant Header affiche un titre avec un style personnalisé. Le composant Menu récupère une liste de pizzas depuis la variable pizzaData, et utilise une expression conditionnelle pour afficher soit une liste de pizzas disponibles, soit un message d'indisponibilité s'il n'y a pas de pizzas.
 
-## Available Scripts
+Le composant Pizza prend en charge l'affichage de chaque pizza avec son nom, ses ingrédients, son prix, et une image correspondante. Si une pizza est épuisée (soldOut), la classe CSS applique un style différent pour griser l'élément et afficher le texte "STOCK ÉPUISÉ".
 
-In the project directory, you can run:
+Le composant Footer affiche un message d'ouverture basé sur l'heure actuelle et permet de passer une commande lorsque la pizzeria est ouverte, entre 11h et 23h. Le composant Horaire, utilisé dans le Footer, affiche les heures d'ouverture de la pizzeria.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+L'application récupère et rend la liste des pizzas en utilisant ReactDOM.createRoot pour l'affichage dynamique dans l'élément HTML avec l'ID "root".
